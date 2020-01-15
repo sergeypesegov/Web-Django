@@ -1,0 +1,15 @@
+{% extends 'forum/base_forum.html' %}
+
+
+
+{% block title %}
+     Ога
+ {% endblock %}
+
+{% block content %}
+     {% for post in posts %}
+        <p>
+            {{ post.title }}
+        </p>
+    {% endfor %}
+ {% endblock %}
