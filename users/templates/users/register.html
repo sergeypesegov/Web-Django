@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load crispy_forms_tags %}
+{% load crispy_forms_filters %}
 {% block content %}
     <div class="content-section">
         <form method="POST">
@@ -15,7 +15,7 @@
 
         <div class="border-top pt-3">
             <small class="text-muted">
-                Уже зарегистрирован? <a class="ml-2" href="#"> Заходи </a>
+                Уже зарегистрирован? <a class="ml-2" href="{% url 'login' %}"> Заходи </a>
             </small>
         </div>
     </div>
