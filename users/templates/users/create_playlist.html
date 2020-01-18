@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <style>
+            li:hover{
+                width:100px;
+                background:gold;
+                cursor:pointer;
+            }
+        </style>
+    </head>
+<body>
+<audio id=audio src="sound1.mp3" controls></audio>
+    <ul>
+        <li id="sound1.mp3">sound1</li>
+        <li id="sound2.mp3">sound2</li>
+        <li id="sound3.mp3">sound3</li>
+        <li id="sound4.mp3">sound4</li>
+        <li id="sound5.mp3">sound5</li>
+    </ul>
+<script>
+    var alles_li = document.getElementsByTagName("li");
+        for(var i = 0; i < alles_li.length; i++){
+            alles_li[i].onclick = function(){
+                audio.src = this.id;
+                audio.play();
+            }
+        }
+</script>
+</body>
+</html>
