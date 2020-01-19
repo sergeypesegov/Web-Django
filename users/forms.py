@@ -1,7 +1,7 @@
 from django import forms
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
-from .models import Profile
+from .models import Profile, Playlist
 
 # куда здесь блин запихать информацию о пользователе
 class UserRegisterForm(UserCreationForm):
@@ -21,4 +21,9 @@ class UserUpdateForm(forms.ModelForm):
 class ProfileUpdateForm(forms.ModelForm):
     class Meta:
         model = Profile
-        fields = ['image']
+        fields = ['image', 'Информация о пользователе']
+
+class PlaylistCreation(forms.ModelForm):
+    class Meta:
+        model = Playlist
+        fields = ['track']

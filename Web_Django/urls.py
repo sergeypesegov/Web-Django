@@ -29,6 +29,7 @@ urlpatterns = [
     path('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html'), name='logout'),
     path('profile/', user_views.profile, name='profile'),
     path('about/', include('forum.urls')),
+    path('create_playlist/', user_views.create_playlist, name='create_playlist')
 ]
 
 if settings.DEBUG:
